@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>Authenticate Bitwala</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<script
+	  src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+	  integrity="sha256-k2WSCIexGzOj3Euiig+TlR8gA0EmPjuc79OEeY5L45g="
+	  crossorigin="anonymous"></script>
+</head>
+
+<body>
+	<div class="container">
+		<h1>Authenticate Bitwala</h1>
+		<div class="btn btn-primary btn-lg js-authenticate">Authenticate</div>
+	</div>
+
+	<script type="text/javascript">
+
+		// Transport
+		// const transport = 'PARENT';
+		const transport = 'COPY';
+
+		// Building the URL
+		const appId = 'KXqBFeSuqzLXvDRop';
+		const permissions = 'bank_transfers_manage';
+
+		const url = `http://localhost:3000/authenticate/${appId}?permissions=${permissions}&transport=${transport}`;
+
+		// Create Popup window
+		const popup = function (url, windowName) {
+       var newWindow = window.open(url, windowName, 'height=800,width=1000');
+       if (window.focus) {newWindow.focus()}
+       return false;
+     }
+
+		 // Global functions to handle response
+		 if (transport === 'PARENT') {
+
+			 window.addEventListener('message', function ({data}) {
+				 const {success, token} = data;
+				 if (success) {
+					 const tokenId = token.split('.')[0];
+					 const tokenSecret = token.split('.')[1];
+					 alert(`Token Id: ${tokenId}. Token Secret: ${tokenSecret}.`);
+				 } else {
+					 alert ('User denied');
+				 }
+			 });
+		 }
+
+		 $(document).ready(function () {
+
+			 // Event Handlers
+			 $('.js-authenticate').click(function () {
+				 popup(url, 'bitwala');
+			 });
+
+			 // Create input if
+			 if (transport === 'COPY') {
+				 $('.container').append('<input type="text" placeholder="Enter your Bitwala token..." class="form-control" />');
+			 }
+		 });
+	</script>
+
+</body>
+</html>

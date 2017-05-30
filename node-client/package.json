@@ -1,0 +1,14 @@
+{
+  "name": "example-app",
+  "version": "1.0.0",
+  "description": "Example app using Bitwala API",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "bitwala": "file:///Users/gringo/dev/bitwala/api-node-client"
+  }
+}
