@@ -49,9 +49,27 @@ def create_tx():
 		}
 	return post(path="/api/v1/transactions", data=data)
 
+def cancel_tx(id=None):
+	if bool(id) == False
+		return "invalid id given"
+	data = { "transactionId": str(id)}
+	return post(path="/api/v1/transactions/cancel", data=data)
+
 def list_txs(page=1):
 	page = int(page)
 	if(page < 1):
 		page = 1
 	data = {'page': page}
+	return get(path="/api/v1/transactions", data=data)
+
+def tx_by_id(id=None)
+	if bool(id) == False
+		return "no tx id given"
+	data = {'transactionId': id}
+	return get(path="/api/v1/transactions", data=data)
+
+def tx_by_ref(ref=None)
+	if bool(ref) == False
+		return "no tx ref given"
+	data = {'ref': ref}
 	return get(path="/api/v1/transactions", data=data)
