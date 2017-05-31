@@ -1,3 +1,5 @@
+.DS_Store
+
 # nodejs related
 node_modules
 
@@ -18,3 +20,39 @@ eggs/
 venv/
 ENV/
 ENV/
+
+# php related
+
+
+# Created by https://www.gitignore.io/api/symfony,composer
+
+### Composer ###
+/phpcomposer.phar
+/php/vendor/ 
+/php/app/cache/*
+/php/app/logs/*
+/php!app/cache/.gitkeep
+/php!app/logs/.gitkeep
+/php/app/spool/*
+/php/var/cache/*
+/php/var/logs/*
+/php/var/sessions/*
+/php!var/cache/.gitkeep
+/php!var/logs/.gitkeep
+/php!var/sessions/.gitkeep
+/php/app/config/parameters.yml
+/php/app/config/parameters.ini
+/php/app/bootstrap.php.cache
+/php/var/bootstrap.php.cache
+/php/bin/*
+/php!bin/console
+/php!bin/symfony_requirements
+/php/web/bundles/
+/php/web/uploads/
+/php/app/phpunit.xml
+/php/phpunit.xml
+/php/build/
+/php**/Entity/*~
+/php/web/css/
+/php/web/js/
+
