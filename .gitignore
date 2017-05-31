@@ -1,1 +1,20 @@
+# nodejs related
 node_modules
+
+# python related
+config/production.conf
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+eggs/
+.eggs/
+*.egg-info/
+.installed.cfg
+*.egg
+.python-version
+.env
+.venv
+venv/
+ENV/
+ENV/
