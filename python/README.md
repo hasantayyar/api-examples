@@ -1,4 +1,4 @@
-This is a sample python application that shows you 
+This is a sample python application for Bitwala rest API.
 
 ### Requirements
 
