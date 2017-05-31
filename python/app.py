@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-from flask import Flask, render_template, jsonify
+from flask import Flask, render_template, request
 from bitwala import headers, api
 import configparser
 import json
@@ -30,6 +30,15 @@ def info_inputs():
 @app.route("/info/outputs")
 def info_outputs():
 	return res(api.info_outputs())
+
+@app.route("/tx/list")
+def list_txs():
+	page = request.args.get('page') or 0
+	return res(api.list_txs(page=page))
+
+@app.route("/tx/create")
+def create_tx():
+	return res(api.create_tx())
 
 if __name__ == "__main__":
 	app.run()
