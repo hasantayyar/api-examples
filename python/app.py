@@ -1,4 +1,9 @@
 # -*- coding: utf-8 -*-
+'''
+This module works as a router of the web app.
+This is also the entry point of the web app.
+
+'''
 from flask import Flask, render_template, request
 from bitwala import headers, api
 import configparser
@@ -6,39 +11,44 @@ import json
 import requests
 import os
 
-app = Flask(__name__)
+APP = Flask(__name__)
 
 def res(data):
-	return app.response_class(
-			response=data,
-			status=200,
-			content_type='application/json; charset=utf-8'
-		)
+    '''
+    response wrapper
+    - get the response data as dict object
+    - return as response class with json header
+    '''
+    return APP.response_class(
+        response=data,
+        status=200,
+        content_type='application/json; charset=utf-8'
+        )
 
-@app.route("/")
+@APP.route("/")
 def main():
-	return render_template('homepage.html')
+    return render_template('homepage.html')
 
-@app.route("/info")
+@APP.route("/info")
 def info():
-	return res(api.info())
+    return res(api.info())
 
-@app.route("/info/inputs")
+@APP.route("/info/inputs")
 def info_inputs():
-	return res(api.info_inputs())
+    return res(api.info_inputs())
 
-@app.route("/info/outputs")
+@APP.route("/info/outputs")
 def info_outputs():
-	return res(api.info_outputs())
+    return res(api.info_outputs())
 
-@app.route("/tx/list")
+@APP.route("/tx/list")
 def list_txs():
-	page = request.args.get('page') or 0
-	return res(api.list_txs(page=page))
+    page = request.args.get('page') or 0
+    return res(api.list_txs(page=page))
 
-@app.route("/tx/create")
+@APP.route("/tx/create")
 def create_tx():
-	return res(api.create_tx())
+    return res(api.create_tx())
 
 if __name__ == "__main__":
-	app.run()
+    APP.run()
