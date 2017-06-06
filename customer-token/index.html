@@ -30,7 +30,13 @@
 
 		// Create Popup window
 		const popup = function (url, windowName) {
-       var newWindow = window.open(url, windowName, 'height=800,width=1000');
+
+			const width = 1000;
+			const height = 800;
+			const left = (screen.width / 2) - (width / 2);
+			const top = (screen.height / 2) - (height / 2);
+
+       var newWindow = window.open(url, windowName, `width=${width},height=${height},left=${left},top=${top}`);
        if (window.focus) {newWindow.focus()}
        return false;
      }
