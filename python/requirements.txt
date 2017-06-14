@@ -1,0 +1,4 @@
+Flask==0.12.2
+hashlib==2.5
+configparser==3.5.0
+requests==2.17.3

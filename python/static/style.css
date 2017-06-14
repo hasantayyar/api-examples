@@ -1,0 +1,8 @@
+@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro');
+
+*{margin:0;padding:0;border:0;}
+body{font-family: 'Source Sans Pro', sans-serif;}
+.page{padding:10px; margin: 30px auto 0 auto; text-align:center; width:500px; border:1px solid #efefef;}
+.page div.nav a{padding: 7px;background: #111; display:inline-block; border-radius: 5px;color: #ee0;text-decoration: none;}
+.page div.nav{ margin-top:10px; display:block; }
+.page div.sec{ display:block;clear:both; height:10px; width:100%;}
