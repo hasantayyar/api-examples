@@ -15,10 +15,10 @@ export default class Main extends Component {
     const transport = 'COPY';
 
     // Building the URL
-    const appId = 'KXqBFeSuqzLXvDRop';
+    const appId = 'TDSjjoxb2bMAvGhQ2';
     const permissions = 'bank_transfers_manage';
 
-    const url = `http://localhost:3000/authenticate/${appId}?permissions=${permissions}&transport=${transport}`;
+    const url = `http://sandbox.bitwala.io/authenticate/${appId}?permissions=${permissions}&transport=${transport}`;
 
     Linking.openURL(url)
       .catch(err => Alert.alert('Couldn\'t open link'));

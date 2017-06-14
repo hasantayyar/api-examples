@@ -3,8 +3,8 @@ const bitwala = require('bitwala');
 const client = bitwala.client({
   env: 'dev',
   token: {
-    _id: 'QrPReF8vqdyNGgAwu',
-    secret: 'R2kxbWYfvb5EtYy6+Q2HwQu0m4wKsy9LrVgVYIxd3AGXqKB/Ue5084/5uH4Tomws'
+    _id: 'JqPp9cX7orLSbrhZM',
+    secret: 'Mo4JGEhaANhLO7wWrzIvbNoXYPdPrVZXIUMu+gW/Ug1wtQgaVDAlypPXqLrq9DxX'
   }
 });
 

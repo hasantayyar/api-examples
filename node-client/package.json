@@ -9,6 +9,6 @@
   "author": "",
   "license": "MIT",
   "dependencies": {
-    "bitwala": "file:///Users/gringo/dev/bitwala/api-node-client"
+    "bitwala": "0.0.3"
   }
 }
