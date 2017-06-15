@@ -7,4 +7,7 @@
 
 ### Steps
 1. `yarn` or `npm install`
-2. `react-native `
+2. `react-native run-ios` or `react-native run-android`
+
+Inline-style:
+![Example auth flow](https://github.com/bitwala/api-examples/blob/master/readme/example-bitwala-auth-flow.jpg")
