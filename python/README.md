@@ -1,11 +1,10 @@
+# Sample Python Application
 This is a sample python application for Bitwala rest API.
 
 ### Requirements
 
 This app will only work for python 3.x. 
 The required pip packages listed in `requirements.txt`
-
-
 
 ### Configuration
 
