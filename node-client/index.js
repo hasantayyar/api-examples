@@ -1,10 +1,10 @@
 const bitwala = require('bitwala');
 
 const client = bitwala.client({
-  env: 'dev',
+  env: 'sandbox',
   token: {
-    _id: 'QrPReF8vqdyNGgAwu',
-    secret: 'R2kxbWYfvb5EtYy6+Q2HwQu0m4wKsy9LrVgVYIxd3AGXqKB/Ue5084/5uH4Tomws'
+    _id: 'YOUR_TOKEN_ID',
+    secret: 'YOUR_TOKEN_SECRET'
   }
 });
 
