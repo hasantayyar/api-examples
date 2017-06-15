@@ -1,14 +1,14 @@
 {
     "name": "slim/slim-skeleton",
-    "description": "A Slim Framework skeleton application for rapid development",
-    "keywords": ["microframework", "rest", "router", "psr7"],
-    "homepage": "http://github.com/slimphp/Slim-Skeleton",
+    "description": "Sample Application to use the Bitwala Rest Api",
+    "keywords": ["bitwala", "bitcoin", "api"],
+    "homepage": "https://www.bitwala.io",
     "license": "MIT",
     "authors": [
         {
-            "name": "Josh Lockhart",
-            "email": "info@joshlockhart.com",
-            "homepage": "http://www.joshlockhart.com/"
+            "name": "Bitwala Api",
+            "email": "api@bitwa.la",
+            "homepage": "https://www.bitwala.io"
         }
     ],
     "require": {
