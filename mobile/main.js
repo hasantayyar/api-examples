@@ -34,7 +34,7 @@ export default class Main extends Component {
     const appId = 'TDSjjoxb2bMAvGhQ2';
     const permissions = 'bank_transfers_manage';
 
-    const uri = `http://localhost:3000/authenticate/${appId}?permissions=${permissions}&transport=${transport}`;
+    const uri = `http://sandbox.bitwala.io/authenticate/${appId}?permissions=${permissions}&transport=${transport}`;
 
     return (
       <View style={styles.container}>
