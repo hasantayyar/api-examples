@@ -19,14 +19,15 @@
 	<script type="text/javascript">
 
 		// Transport
-		// const transport = 'PARENT';
-		const transport = 'COPY';
+		const transport = 'PARENT';
+		// const transport = 'COPY';
 
 		// Building the URL
-		const appId = 'KXqBFeSuqzLXvDRop';
+		const appId = 'TDSjjoxb2bMAvGhQ2';
 		const permissions = 'bank_transfers_manage';
+		const endpoint = 'https://sandbox.bitwala.io/'
 
-		const url = `http://localhost:3000/authenticate/${appId}?permissions=${permissions}&transport=${transport}`;
+		const url = `${endpoint}authenticate/${appId}?permissions=${permissions}&transport=${transport}`;
 
 		// Create Popup window
 		const popup = function (url, windowName) {
