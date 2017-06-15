@@ -12,10 +12,12 @@ import {
   TextInput
 } from 'react-native';
 
+import config from './config';
+
 export default class Main extends Component {
   constructor(props) {
     super(props);
-    
+
     this.handlePress = this.handlePress.bind(this);
 
     this.state = {
@@ -28,13 +30,9 @@ export default class Main extends Component {
   }
 
   render() {
-    const transport = 'COPY';
+    const {transport, appId, permissions, endpoint} = config;
 
-    // Building the URL
-    const appId = 'TDSjjoxb2bMAvGhQ2';
-    const permissions = 'bank_transfers_manage';
-
-    const uri = `http://sandbox.bitwala.io/authenticate/${appId}?permissions=${permissions}&transport=${transport}`;
+    const uri = `${endpoint}authenticate/${appId}?permissions=${permissions}&transport=${transport}`;
 
     return (
       <View style={styles.container}>
@@ -44,10 +42,10 @@ export default class Main extends Component {
         <Button onPress={this.handlePress} title="Authenticate"/>
         <TextInput
           style={{
-            marginTop: 10, 
-            height: 40, 
-            borderWidth: 1, 
-            borderColor: 'gray', 
+            marginTop: 10,
+            height: 40,
+            borderWidth: 1,
+            borderColor: 'gray',
             marginHorizontal: 10,
             paddingHorizontal: 10
           }}
