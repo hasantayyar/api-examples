@@ -6,25 +6,35 @@ import {
   View,
   Button,
   Linking,
-  Alertk
+  Alertk,
+  Modal,
+  WebView,
+  TextInput
 } from 'react-native';
 
 export default class Main extends Component {
+  constructor(props) {
+    super(props);
+    
+    this.handlePress = this.handlePress.bind(this);
+
+    this.state = {
+      showModal: false
+    }
+  }
 
   handlePress() {
+    this.setState({showModal: true});
+  }
+
+  render() {
     const transport = 'COPY';
 
     // Building the URL
     const appId = 'TDSjjoxb2bMAvGhQ2';
     const permissions = 'bank_transfers_manage';
 
-    const url = `http://sandbox.bitwala.io/authenticate/${appId}?permissions=${permissions}&transport=${transport}`;
-
-    Linking.openURL(url)
-      .catch(err => Alert.alert('Couldn\'t open link'));
-  }
-
-  render() {
+    const uri = `http://localhost:3000/authenticate/${appId}?permissions=${permissions}&transport=${transport}`;
 
     return (
       <View style={styles.container}>
@@ -32,6 +42,23 @@ export default class Main extends Component {
           Authenticate with Bitwala
         </Text>
         <Button onPress={this.handlePress} title="Authenticate"/>
+        <TextInput
+          style={{
+            marginTop: 10, 
+            height: 40, 
+            borderWidth: 1, 
+            borderColor: 'gray', 
+            marginHorizontal: 10,
+            paddingHorizontal: 10
+          }}
+          placeholder="Enter your Bitwala token..."
+        />
+        <Modal animationType={"slide"} transparent={false} visible={this.state.showModal} onRequestClose={() => {this.setState({showModal: false})}}>
+          {this.state.showModal
+            && <WebView source={{uri}} />
+          }
+          <Button onPress={() => {this.setState({showModal: false})}} title="Close"/>
+        </Modal>
       </View>
     );
   }
