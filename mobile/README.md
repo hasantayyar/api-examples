@@ -11,4 +11,4 @@
 3. `react-native run-ios` or `react-native run-android`
 
 Inline-style:
-![Example auth flow](https://github.com/bitwala/api-examples/blob/master/readme/example-bitwala-auth-flow.jpg")
+![Example auth flow](https://raw.githubusercontent.com/bitwala/api-examples/master/readme/example-bitwala-auth-flow.jpg)
