@@ -2,5 +2,5 @@
   "transport": "COPY",
   "appId": "TDSjjoxb2bMAvGhQ2",
   "permissions": "bank_transfers_manage",
-  "endpoint": "http://sandbox.bitwala.io/",
+  "endpoint": "http://sandbox.bitwala.com/",
 }
