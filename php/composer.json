@@ -2,13 +2,13 @@
     "name": "slim/slim-skeleton",
     "description": "Sample Application to use the Bitwala Rest Api",
     "keywords": ["bitwala", "bitcoin", "api"],
-    "homepage": "https://www.bitwala.io",
+    "homepage": "https://www.bitwala.com",
     "license": "MIT",
     "authors": [
         {
             "name": "Bitwala Api",
             "email": "api@bitwa.la",
-            "homepage": "https://www.bitwala.io"
+            "homepage": "https://www.bitwala.com"
         }
     ],
     "require": {
